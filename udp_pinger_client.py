@@ -18,7 +18,7 @@ def find_rtt(target, port):
                 data, server = udp_socket.recvfrom(4096)
                 data = data.decode()
                 print("Received " + data)
-                end = time.time();
+                end = time.time()
                 elapsed = end - start
                 print("RTT: " + str(elapsed) + " seconds\n")
             except socket.timeout:
@@ -27,5 +27,4 @@ def find_rtt(target, port):
                 print("something went wrong")
 
     finally:
-        print("closing socket")
         udp_socket.close()

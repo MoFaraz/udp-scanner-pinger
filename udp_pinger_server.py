@@ -1,6 +1,7 @@
 import random
 import socket
 
+
 def start_server(target, port):
     host = socket.gethostbyname(target)
     udp_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -14,4 +15,3 @@ def start_server(target, port):
         if rand < 4:
             continue
         udp_socket.sendto(message, address)
-        
