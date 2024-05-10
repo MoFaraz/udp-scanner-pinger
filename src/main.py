@@ -3,8 +3,14 @@ from udp_pinger_client import find_rtt
 from udp_pinger_server import start_server
 import threading
 import sys
+import pyfiglet
+
+def print_pyfiglet(context, myfont):
+    print(pyfiglet.figlet_format(context, font=myfont))
 
 if __name__ == "__main__":
+    print_pyfiglet("UDP_SCANNER_PINGER", "digital")
+    print_pyfiglet("FARAZMAND___MORADI", "digital")
     server_thread = threading.Thread(target=start_server, args=('localhost',12000))
     server_thread.daemon = True
     server_thread.start()
