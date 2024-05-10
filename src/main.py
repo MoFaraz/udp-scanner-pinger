@@ -16,12 +16,15 @@ if __name__ == "__main__":
     server_thread.start()
     try: 
         while True:
-            user_input = input("\n[1] udp-port-scanner  [2] udp-pinger\n")
+            user_input = input("\n[1] udp-port-scanner  [2] udp-pinger  [q] exit\n")
             if user_input == '1':
                 Udp_Socket('localhost')
                 #Tcp_Socket('localhost')
             elif user_input == '2':
                 find_rtt('localhost', 12000)
+            elif user_input == 'q':
+                print("good bye") 
+                sys.exit()
             else:
                 print("Please Input Numer [1] or [2]")
     except KeyboardInterrupt:
