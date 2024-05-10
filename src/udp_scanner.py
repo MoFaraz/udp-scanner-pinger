@@ -1,4 +1,3 @@
-import pyfiglet
 import socket
 import sys
 import time

@@ -13,8 +13,8 @@ def find_rtt(target, port):
             message = 'Ping #' + str(i) + " " + time.ctime(start)
             message1 = message.encode()
             try:
-                sent = udp_socket.sendto(message1, server_addr)
                 print("Sent " + message)
+                sent = udp_socket.sendto(message1, server_addr)
                 data, server = udp_socket.recvfrom(4096)
                 data = data.decode()
                 print("Received " + data)

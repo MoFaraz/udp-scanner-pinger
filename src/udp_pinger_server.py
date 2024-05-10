@@ -11,7 +11,6 @@ def start_server(target, port):
         rand = random.randint(0, 10)
         message, address = udp_socket.recvfrom(1024)
         message = message.upper()
-        print(f'Message {message} is recived')
         if rand < 4:
             continue
         udp_socket.sendto(message, address)
